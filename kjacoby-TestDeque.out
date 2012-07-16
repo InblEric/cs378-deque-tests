@@ -1,0 +1,61 @@
+==21408== Memcheck, a memory error detector
+==21408== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==21408== Using Valgrind-3.6.0.SVN-Debian and LibVEX; rerun with -h for copyright info
+==21408== Command: TestDeque.c++.app
+==21408== 
+TestDeque.c++
+
+..........F.F.............................................F.................F.F...............F.......................................................................
+
+
+!!!FAILURES!!!
+Test Results:
+Run:  160   Failures: 6   Errors: 0
+
+
+1) test: TestDequeI7MyDequeIiSaIiEEE::test_comparison2 (F) line: 112 TestDeque.c++
+assertion failed
+- Expression: x <= y
+
+
+2) test: TestDequeI7MyDequeIiSaIiEEE::test_comparison3 (F) line: 122 TestDeque.c++
+assertion failed
+- Expression: !(y < x)
+
+
+3) test: TestDequeI7MyDequeIiSaIiEEE::test_front3 (F) line: 454 TestDeque.c++
+assertion failed
+- Expression: x.front() == 'b'
+
+
+4) test: TestDequeI7MyDequeIiSaIiEEE::test_push_front2 (F) line: 604 TestDeque.c++
+assertion failed
+- Expression: x.size() == 4
+
+
+5) test: TestDequeI7MyDequeIiSaIiEEE::test_push_front3 (F) line: 612 TestDeque.c++
+assertion failed
+- Expression: x.size() == 1
+
+
+6) test: TestDequeISt5dequeIiSaIiEEE::test_comparison (F) line: 105 TestDeque.c++
+assertion failed
+- Expression: !(x <= y)
+
+
+Done.
+==21408== 
+==21408== HEAP SUMMARY:
+==21408==     in use at exit: 128,688 bytes in 219 blocks
+==21408==   total heap usage: 6,430 allocs, 6,211 frees, 963,642 bytes allocated
+==21408== 
+==21408== LEAK SUMMARY:
+==21408==    definitely lost: 968 bytes in 92 blocks
+==21408==    indirectly lost: 4,840 bytes in 121 blocks
+==21408==      possibly lost: 0 bytes in 0 blocks
+==21408==    still reachable: 122,880 bytes in 6 blocks
+==21408==         suppressed: 0 bytes in 0 blocks
+==21408== Rerun with --leak-check=full to see details of leaked memory
+==21408== 
+==21408== For counts of detected and suppressed errors, rerun with: -v
+==21408== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
