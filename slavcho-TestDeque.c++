@@ -996,6 +996,14 @@ struct TestDeque : CppUnit::TestFixture {
 		}
 	}
 
+	void test_constructor_8() {
+		C d;
+		C e(d);
+
+		CPPUNIT_ASSERT(e.size() == 0);
+		CPPUNIT_ASSERT(d.size() == e.size());
+	}
+
 	//--------------------
 	// assignment operator
 	//--------------------
@@ -1923,6 +1931,7 @@ struct TestDeque : CppUnit::TestFixture {
 	CPPUNIT_TEST(test_constructor_5);
 	CPPUNIT_TEST(test_constructor_6);
 	CPPUNIT_TEST(test_constructor_7);
+	CPPUNIT_TEST(test_constructor_8);
 	CPPUNIT_TEST(test_assign_1);
 	CPPUNIT_TEST(test_assign_2);
 	CPPUNIT_TEST(test_assign_3);
