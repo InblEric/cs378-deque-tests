@@ -1,0 +1,16 @@
+TestDeque.c++
+
+.....................................................F.........................................................................
+
+
+!!!FAILURES!!!
+Test Results:
+Run:  126   Failures: 1   Errors: 0
+
+
+1) test: TestDequeI7MyDequeIiSaIiEEE::test_push_front_6 (F) line: 503 TestDeque.c++
+assertion failed
+- Expression: x == &a[5]
+
+
+Done.
